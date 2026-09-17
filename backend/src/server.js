@@ -27,15 +27,19 @@ app.use(
         credentials: true
     })
 );
-app.use("/api/auth", authRoutes);
-app.use(errorMiddleware);
+
+
 // Health check
+app.use("/api/auth", authRoutes);
+
 app.get("/api/health", (req, res) => {
     res.json({
         success: true,
         message: "ClassIQ API is running"
     });
 });
+
+app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;
 
