@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassIQ - Dashboard</title>
+    <meta name="description" content="Access your ClassIQ dashboard to view your courses, track your learning, and continue your online education.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="dashboard-page">
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-container-inner">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.svg" class="logo-icon" alt="ClassIQ">
+                    <span>ClassIQ</span>
+                </a>
+                <nav class="nav-links">
+                    <a href="dashboard.html" class="active-link">Dashboard</a>
+                </nav>
+
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login" id="navLoginBtn">Login</a>
+                <a href="signup.html" class="btn btn-signup" id="navSignupBtn">SignUp</a>
+                <a href="#" class="btn btn-login" id="navLogoutBtn" style="display: none;">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Content -->
+    <main class="dashboard-container">
+        
+        <!-- Enroll Banner Section -->
+        <section class="enroll-banner">
+            <div class="banner-content">
+                <h2>Enroll In Your Fav Courses</h2>
+                <p style="color: var(--text-light); margin-top: 8px; font-size: 0.9rem;">Start learning today with our top-rated courses.</p>
+            </div>
+            <div class="banner-image">
+                <img src="assets/images/dashboard.png" alt="3D Character on laptop">
+                <img src="assets/images/gradient.png" class="dash-gradient" alt="Gradient">
+            </div>
+        </section>
+
+        <!-- All Courses Section -->
+        <section class="all-courses">
+            <div class="section-header">
+                <h2>All Courses <img src="assets/images/arrow.svg"  alt="All Courses Arrow"></h2>
+            </div>
+            
+            <div class="course-grid">
+                
+                <!-- Card 1: Web Development -->
+                <a href="#" class="course-card-filled">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&auto=format&fit=crop&q=60" alt="Web Development">
+                        <span class="badge badge-green">Bestseller</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Web Development</span>
+                        <h3>The Complete Web Developer Bootcamp</h3>
+                        <p class="instructor">By Dr. Angela Yu</p>
+                        <div class="card-footer">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.8 <span>(120k)</span>
+                            </div>
+                            <div class="price">$19.99</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2: Data Science -->
+                <a href="#" class="course-card-filled">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60" alt="Data Science">
+                        <span class="badge badge-yellow">Hot</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Data Science</span>
+                        <h3>Python for Data Science and Machine Learning</h3>
+                        <p class="instructor">By Jose Portilla</p>
+                        <div class="card-footer">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.7 <span>(85k)</span>
+                            </div>
+                            <div class="price">$24.99</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3: App Development -->
+                <a href="#" class="course-card-filled">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&auto=format&fit=crop&q=60" alt="App Development">
+                        <span class="badge badge-blue">New</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">App Development</span>
+                        <h3>Flutter & Dart - The Complete Guide</h3>
+                        <p class="instructor">By Maximilian Schwarzmüller</p>
+                        <div class="card-footer">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.9 <span>(45k)</span>
+                            </div>
+                            <div class="price">$22.99</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 4: UI/UX Design -->
+                <a href="#" class="course-card-filled">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=500&auto=format&fit=crop&q=60" alt="UI/UX Design">
+                    </div>
+                    <div class="card-content">
+                        <span class="category">UI/UX Design</span>
+                        <h3>Figma UI/UX Design Essentials</h3>
+                        <p class="instructor">By Daniel Walter Scott</p>
+                        <div class="card-footer">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.8 <span>(32k)</span>
+                            </div>
+                            <div class="price">$18.99</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 5: Digital Marketing -->
+                <a href="#" class="course-card-filled">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=500&auto=format&fit=crop&q=60" alt="Marketing">
+                        <span class="badge badge-yellow">Trending</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Marketing</span>
+                        <h3>Digital Marketing Masterclass</h3>
+                        <p class="instructor">By Phil Ebiner</p>
+                        <div class="card-footer">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.6 <span>(28k)</span>
+                            </div>
+                            <div class="price">$16.99</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 6: Cybersecurity -->
+                <a href="#" class="course-card-filled">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&auto=format&fit=crop&q=60" alt="Cybersecurity">
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Cybersecurity</span>
+                        <h3>Complete Cyber Security Course</h3>
+                        <p class="instructor">By Nathan House</p>
+                        <div class="card-footer">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.7 <span>(19k)</span>
+                            </div>
+                            <div class="price">$21.99</div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="assets/script.js"></script>
+    
+    
+</body>
+
+</html>

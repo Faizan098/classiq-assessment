@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassIQ - Sign Up</title>
+    <meta name="description" content="Create your ClassIQ account and start learning practical skills through courses designed for your career growth.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="auth-page">
+
+    <header>
+        <div class="nav-container">
+            <div class="nav-container-inner">
+
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.svg" class="logo-icon" alt="ClassIQ">
+                    <span>ClassIQ</span>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html#courses">Courses</a>
+                </nav>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <h2>SignUp</h2>
+            <form id="signupForm" novalidate>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Enter Your Email" required>
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="fullname" placeholder="Enter Your Fullname" required>
+                    <span class="error-msg" id="nameError"></span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Enter Your Password" required>
+                    <span class="error-msg" id="passwordError"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" id="submitBtn">SignUp</button>
+            </form>
+            <p class="switch-link">
+                Already have an account? <a href="login.html">Login</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
