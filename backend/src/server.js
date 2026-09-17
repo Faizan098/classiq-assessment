@@ -32,6 +32,13 @@ app.use(
 // Health check
 app.use("/api/auth", authRoutes);
 
+app.get("/", (req, res) => {
+    res.json({
+        success: true,
+        message: "ClassIQ API is running"
+    });
+});
+
 app.get("/api/health", (req, res) => {
     res.json({
         success: true,
