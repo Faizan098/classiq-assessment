@@ -46,6 +46,10 @@ app.get("/api/health", (req, res) => {
     });
 });
 
+app.get("/test-classiq", (req, res) => {
+    res.status(200).send("CLASSIQ BACKEND WORKING");
+});
+
 app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;
