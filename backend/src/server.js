@@ -59,18 +59,43 @@
 // });
 
 
+require("dns").setServers(["8.8.8.8", "1.1.1.1"]);
+require("dotenv").config();
 
 const express = require("express");
+const cors = require("cors");
+const helmet = require("helmet");
+const cookieParser = require("cookie-parser");
+
+const connectDB = require("./config/db");
+const authRoutes = require("./routes/authRoutes");
+const errorMiddleware = require("./middleware/errorMiddleware");
 
 const app = express();
 
-app.get("/", (req, res) => {
-    res.send("CLASSIQ BACKEND IS WORKING");
+connectDB();
+
+app.use(helmet());
+app.use(express.json());
+app.use(cookieParser());
+
+app.use(
+    cors({
+        origin: process.env.CLIENT_URL,
+        credentials: true
+    })
+);
+
+app.use("/api/auth", authRoutes);
+
+app.get("/api/health", (req, res) => {
+    res.json({
+        success: true,
+        message: "ClassIQ API is running"
+    });
 });
 
-app.get("/test-classiq", (req, res) => {
-    res.send("TEST ROUTE WORKING");
-});
+app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;
 
