@@ -21,20 +21,9 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-const allowedOrigins = [
-    "http://localhost:5500",
-    "https://classiq-frontend-qtp8.onrender.com"
-];
-
 app.use(
     cors({
-        origin: (origin, callback) => {
-            if (!origin || allowedOrigins.includes(origin)) {
-                callback(null, true);
-            } else {
-                callback(new Error("Not allowed by CORS"));
-            }
-        },
+        origin: "https://classiq-frontend-qtp8.onrender.com",
         credentials: true
     })
 );
